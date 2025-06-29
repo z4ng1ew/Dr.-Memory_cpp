@@ -1,0 +1,24 @@
+Dr. Memory version 2.6.0 build 0 built on Sep 21 2023 17:36:53
+Dr. Memory results for pid 3720: "main"
+Recorded 17 suppression(s) from default /home/s/DrMemory-Linux-2.6.0/bin64/suppress-default.txt
+
+Error #1: LEAK 400 bytes 
+# 0 replace_operator_new_array               [/home/runner/work/drmemory/drmemory/common/alloc_replace.c:2932]
+# 1 memoryLeakFunction
+# 2 main
+
+===========================================================================
+FINAL SUMMARY:
+
+DUPLICATE ERROR COUNTS:
+
+SUPPRESSIONS USED:
+
+ERRORS FOUND:
+      0 unique,     0 total unaddressable access(es)
+      0 unique,     0 total uninitialized access(es)
+      0 unique,     0 total invalid heap argument(s)
+      0 unique,     0 total warning(s)
+      1 unique,     1 total,    400 byte(s) of leak(s)
+      0 unique,     0 total,      0 byte(s) of possible leak(s)
+Details: /home/s/DrMemory-Linux-2.6.0/drmemory/logs/DrMemory-main.3720.000/results.txt

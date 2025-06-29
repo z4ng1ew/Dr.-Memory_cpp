@@ -1,0 +1,73 @@
+process=3720, parent=2034
+Dr. Memory version 2.6.0 build 0 built on Sep 21 2023 17:36:53
+start time: 3721029:02:49.880 == 21:02:49.880 06/29/2025
+Recorded 17 suppression(s) from default /home/s/DrMemory-Linux-2.6.0/bin64/suppress-default.txt
+new thread #0 id=3720
+
+module load event: "libdrmemorylib.so" 0x00007f9a0761d000-0x00007f9a0778c000 modid: 1 /home/s/DrMemory-Linux-2.6.0/bin64/release/libdrmemorylib.so
+
+module load event: "main" 0x00007f9a1761b000-0x00007f9a17622000 modid: 2 /home/s/DrMemory-Linux-2.6.0/main
+
+module load event: "ld-linux-x86-64.so.2" 0x00007f9a1b5e6000-0x00007f9a1b622000 modid: 3 /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+WARNING: unable to load symbols for /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+
+module load event: "libdynamorio.so" 0x00007f9a1b636000-0x00007f9a1b858000 modid: 4 /home/s/DrMemory-Linux-2.6.0/dynamorio/lib64/release/libdynamorio.so
+WARNING: unable to open [vdso]
+
+module load event: "linux-vdso.so.1" 0x00007ffec47aa000-0x00007ffec47ac000 modid: 5 [vdso]
+
+module load event: "libc.so.6" 0x00007f9a1ad2c000-0x00007f9a1af55000 modid: 6 /usr/lib/x86_64-linux-gnu/libc.so.6
+WARNING: unable to load symbols for /usr/lib/x86_64-linux-gnu/libc.so.6
+
+module load event: "libm.so.6" 0x00007f9a1b45a000-0x00007f9a1b541000 modid: 7 /usr/lib/x86_64-linux-gnu/libm.so.6
+WARNING: unable to load symbols for /usr/lib/x86_64-linux-gnu/libm.so.6
+
+module load event: "libgcc_s.so.1" 0x00007f9a1b541000-0x00007f9a1b561000 modid: 8 /usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+WARNING: unable to load symbols for /usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+
+module load event: "libstdc++.so.6" 0x00007f9a1af55000-0x00007f9a1b181000 modid: 9 /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30
+WARNING: unable to load symbols for /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30
+WARNING: assuming operator new[] is non-placement in libstdc++.so.6 @0x00007f9a1b003a90
+WARNING: assuming operator new is non-placement in libstdc++.so.6 @0x00007f9a1b003a70
+WARNING: assuming operator new is non-placement in libstdc++.so.6 @0x00007f9a1b003a00
+WARNING: assuming operator new[] is non-placement in libstdc++.so.6 @0x00007f9a1b003aa0
+WARNING: assuming operator delete is non-placement in libstdc++.so.6 @0x00007f9a1b003ad0
+WARNING: assuming operator delete is non-placement in libstdc++.so.6 @0x00007f9a1b001c20
+WARNING: assuming operator delete[] is non-placement in libstdc++.so.6 @0x00007f9a1b003b00
+WARNING: assuming operator delete is non-placement in libstdc++.so.6 @0x00007f9a1b003ae0
+WARNING: assuming operator delete is non-placement in libstdc++.so.6 @0x00007f9a1b003ac0
+WARNING: assuming operator delete[] is non-placement in libstdc++.so.6 @0x00007f9a1b003af0
+WARNING: assuming operator delete[] is non-placement in libstdc++.so.6 @0x00007f9a1b001c50
+WARNING: assuming operator delete[] is non-placement in libstdc++.so.6 @0x00007f9a1b003b10
+
+Error #1: LEAK 400 bytes 
+# 0 replace_operator_new_array [/home/runner/work/drmemory/drmemory/common/alloc_replace.c:2932] (0x00007f9a0766ad50 <libdrmemorylib.so+0x4dd50>) modid:1
+# 1 memoryLeakFunction (0x00007f9a1761c39f <main+0x139f>) modid:2
+# 2 main (0x00007f9a1761c823 <main+0x1823>) modid:2
+	error end
+
+DUPLICATE ERROR COUNTS:
+
+SUPPRESSIONS USED:
+
+ERRORS FOUND:
+      0 unique,     0 total unaddressable access(es)
+      0 unique,     0 total uninitialized access(es)
+      0 unique,     0 total invalid heap argument(s)
+      0 unique,     0 total warning(s)
+      1 unique,     1 total,    400 byte(s) of leak(s)
+      0 unique,     0 total,      0 byte(s) of possible leak(s)
+Details: /home/s/DrMemory-Linux-2.6.0/drmemory/logs/DrMemory-main.3720.000/results.txt
+
+DUPLICATE POTENTIAL ERROR COUNTS:
+
+POTENTIAL ERRORS FOUND:
+      0 unique,     0 total potential unaddressable access(es)
+      0 unique,     0 total potential uninitialized access(es)
+      0 unique,     0 total potential invalid heap argument(s)
+      0 unique,     0 total potential warning(s)
+      0 unique,     0 total,      0 byte(s) of potential leak(s)
+      0 unique,     0 total,      0 byte(s) of potential possible leak(s)
+Details: /home/s/DrMemory-Linux-2.6.0/drmemory/logs/DrMemory-main.3720.000/potential_errors.txt
+Exiting @0:00:00.905 in thread 3720
+LOG END

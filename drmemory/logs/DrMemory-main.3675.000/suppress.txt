@@ -1,0 +1,16 @@
+# File for suppressing errors found in pid 3675: "main"
+
+# Suppression for Error #1
+LEAK
+name=Error #1 (update to meaningful name)
+libdrmemorylib.so!replace_operator_new_array
+main!memoryLeakFunction
+main!main
+
+## Mod+offs-style suppression for Error #1:
+LEAK
+name=Error #1 (update to meaningful name)
+<libdrmemorylib.so+0x4dd50>
+<main+0x139f>
+<main+0x1823>
+
